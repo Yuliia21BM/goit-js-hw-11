@@ -18,7 +18,13 @@
     "url": "https://github.com/Yuliia21BM/goit-js-hw-11/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "jquery": "^3.6.1",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
+    "popmotion": "^11.0.5",
+    "simplelightbox": "^2.10.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
