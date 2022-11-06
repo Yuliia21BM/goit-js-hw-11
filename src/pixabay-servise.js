@@ -2,7 +2,7 @@ export default class PixabayAPI{
     constructor() {
         this.searchQuery = '';
         this.page = 1;
-        this.limit = 500;
+        // this.limit = 500;
     }
 
     async featchImages() {
@@ -23,14 +23,14 @@ export default class PixabayAPI{
         this.page = 1
     }
 
-    availableimages() {
-        if (this.page * 40 > this.limit) {
-            window.removeEventListener('scroll', onScrollWindow, {
-                passive: true
-            });
-            loadMoreBtn.classList.add('is-hidden');
-        }
-    }
+    // availableimages() {
+    //     if (this.page * 40 > this.limit) {
+    //         window.removeEventListener('scroll', onScrollWindow, {
+    //             passive: true
+    //         });
+    //         loadMoreBtn.classList.add('is-hidden');
+    //     }
+    // }
 
     get query() {
         return this.searchQuery;
