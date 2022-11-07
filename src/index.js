@@ -38,18 +38,18 @@ async function onSearchFormSubmit(e) {
 
 async function featchImages() {
     await pixabayAPI.featchImages().then(images => {
-        if (images.data.total === 0) {
+        if (images.total === 0) {
             loadMoreBtn.classList.add('is-hidden');
                 imagesContainer.innerHTML = "";
                 return Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         }
         else {
                 pixabayAPI.incrementPage();
-                const createdImages = images.data.hits.map(image => createMarkup(image)).join('');
+                const createdImages = images.hits.map(image => createMarkup(image)).join('');
                 imagesContainer.insertAdjacentHTML('beforeend', createdImages);
                 lightbox.refresh();
         }
-        return images.data.totalHits;
+        return images.totalHits;
     }).then((totalHits) => {
         const allItems = document.querySelectorAll('a.gallery__image');
     if (allItems.length === totalHits) {
