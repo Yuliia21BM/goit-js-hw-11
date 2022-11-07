@@ -51,7 +51,6 @@ async function featchImages() {
         }
         return images.data.totalHits;
     }).then((totalHits) => {
-        // Notify.info(`Hooray! We found ${totalHits} images.`)
         const allItems = document.querySelectorAll('a.gallery__image');
     if (allItems.length === totalHits) {
             loadMoreBtn.classList.add('is-hidden');
