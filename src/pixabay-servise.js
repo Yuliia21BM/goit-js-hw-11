@@ -8,7 +8,7 @@ export default class PixabayAPI{
 
     async featchImages() {
   try {
-    const response = await axios.get(`https://pixabay.com/api?key=31109678-013e606e285b36a60c72d34b0&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}&webformatURL`);
+    const response = await axios.get(`https://pixabay.com/api/?key=31109678-013e606e285b36a60c72d34b0&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}&webformatURL`);
       return response;
   } catch (error) {
     console.error(error);
