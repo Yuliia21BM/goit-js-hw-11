@@ -16,7 +16,8 @@ body {
   color: #212121;
   line-height: 1.5;
   background-image: url(../images/bg-img.webp);
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 #search-box {
@@ -47,24 +48,57 @@ body {
 .header-container-text{
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
 }
 
 .header-text{
-  font-family: Playball, sans-serif;
-  font-size: 50px;
-  line-height: 0;
-  color: #fff;
+  display: none;
 }
+
+.header-arrow{
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-text{
+    display: block;
+    font-size: 30px;
+    font-family: Playball, sans-serif;
+    line-height: 0;
+    color: #fff;
+  }
+  .header-arrow{
+    display: block;
+    width: 50px;
+  }
+}
+@media screen and (min-width: 1000px){
+  .header-text{
+    font-size: 50px;
+  }
+  .header-arrow {
+    width: 100px;
+  }
+  .header-container-text{
+    gap: 100px;
+  }
+  .header-input{
+    width: 400px;
+  }
+  .search-form{
+    gap: 100px;
+  }
+}
+
 
 .search-form{
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
 }
 
 .header-input{
-  width: 400px;
+  width: 300px;
   padding: 5px 10px;
   font-size: 16px;
 }
